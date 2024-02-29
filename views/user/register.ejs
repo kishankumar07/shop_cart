@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/userAssets/loginAssets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/static/userAssets/loginAssets/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        
+                        <%if(typeof errMessage!='undefined'){%>
+                            <%= errMessage%>
+                            <%}%>
+
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" action="/register" class="register-form" id="register-form" onsubmit="return registerValidation()" >
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                                <p id="nameErr" class="error-message" style="color: red;"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email"/>
+                                <p id="emailErr" class="error-message" style="color: red;"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile"><i class="zmdi zmdi-email"></i></label>
+                                <input type="number" name="mobile" id="mobile" placeholder="Mobile Number"/>
+                                <p id="mobileErr" class="error-message" style="color: red;"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password"/>
+                                <p id="passwordErr" class="error-message" style="color: red;"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="conPassword" id="conPassword" placeholder="Repeat your password"/>
+                                <p id="passwordMismatch" class="error-message" style="color: red;"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" >
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="/static/userAssets/loginAssets/images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="/login" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+    </div>
+
+    <!-- JS -->
+    <script src="/static/userAssets/js/validation.js"></script>
+    <script src="/static/userAssets/loginAssets/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/userAssets/loginAssets/js/main.js"></script>
+
+    <!-- <script>
+        function disableSubmit() {
+            document.getElementById("signup").disabled = true;
+            console.log('Button disabled');
+        }
+    </script> -->
+        let formSubmitted = false;
+    
+        function submitForm() {
+            if (!formSubmitted) {
+                formSubmitted = true;
+                document.getElementById("signup").disabled = true;
+                console.log('hi');
+                return true;  // Allow the form to be submitted
+            }
+            return false;  // Prevent the form submission if it has already been submitted
+        }
+    </script>
+
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

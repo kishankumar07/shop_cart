@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .otp-field input {
+      height: 45px;
+      width: 42px;
+      border-radius: 6px;
+      outline: none;
+      font-size: 1.125rem;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .otp-field input:focus {
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .otp-field input::-webkit-inner-spin-button,
+    .otp-field input::-webkit-outer-spin-button {
+      display: none;
+    }
+
+    #verifyButton {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card bg-white mt-5 border-0">
+        <div class="card-body p-5 text-center">
+          <h4>Verify Email</h4>
+          <p>Please enter the OTP sent to your email.</p>
+
+          <div class="otp-field input-container d-flex flex-row justify-content-center mt-2">
+            <input type="text" class="m-1 text-center form-control rounded" maxlength="1" name="first" />
+            <input type="text" class="m-1 text-center form-control rounded" maxlength="1" name="second" />
+            <input type="text" class="m-1 text-center form-control rounded" maxlength="1" name="third" />
+            <input type="text" class="m-1 text-center form-control rounded" maxlength="1" name="fourth" />
+            <input type="text" class="m-1 text-center form-control rounded" maxlength="1" name="fifth" />
+          </div>
+
+          <button id="verifyButton" class="btn btn-success px-4">Verify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8D+AzMR5zrr8lQT2JQkHeW6Oz30TEYWHx2gDViCxW0dIK9+O/QXuRbYEwKo4" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+  // Your JavaScript code for OTP verification can go here
+</script>
+
+</body>
+</html>
